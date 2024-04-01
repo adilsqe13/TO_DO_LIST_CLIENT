@@ -9,12 +9,7 @@ function App() {
   return (
     <>
       <Alert />
-      <div className="container">
-        <div className="row">
-          <h1 className='heading fs-1'>To Do List App</h1>
-        </div>
-        <DataForm /> 
-      </div>
+      <DataForm />
     </>
 
   )

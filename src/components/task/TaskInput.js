@@ -7,7 +7,7 @@ export default function TaskInput() {
     const { allTask, setAllTask, showAlert, getAllTasks } = useContext(taskContext);
     const [task, setTask] = useState('');
 
-    //Add TASK
+    //Handle Add TASK
     const addTask = async () => {
         let trimmedTask = task.trim();
         try {
@@ -20,6 +20,7 @@ export default function TaskInput() {
                 showAlert("Failed", "Please enter a valid task..", "danger");
             }
         } catch (error) {
+            //Error Handling
             console.log(error);
             showAlert("Network Error", "Something went wrong", "danger");
         }
